@@ -1,0 +1,12 @@
+spring.security:
+    oauth2.client:
+        provider.oauth2-jwt-keyclock-springboot-client:
+            issuer-uri: http://localhost:8180/auth/realms/oauth2-jwt-keyclock1
+        registration.oauth2-jwt-keyclock-springboot-client:
+            client-id: oauth2-jwt-keyclock-springboot-client
+            client-secret: 3bceb709-36be-4b1b-9d68-27aabced2a04
+            scope: openid, profile, roles
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/oauth2-jwt-keyclock-springboot-client
+
+

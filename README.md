@@ -15,4 +15,23 @@ Spring boot project:
 Create simple controller  
 Configure yaml properies with spring security  
 ## Lesson 2
-
+--
+## Lesson 3 (client credentials flow)
+Client settings:  
+Access type: confidential  
+Disable "Standart flow enabled"  
+Enable "Service accounts enabled"  
+No need to redirect uri  
+Spring boot project:  
+Create simple controller in mcs1  
+Configure yaml properies with spring security  
+Create and configure the SecurityConfig which extends WebSecurityConfigurerAdapter  
+Run mcs1 and open postman  
+Config the authorization tab:  
+Set Token Name  
+Type: OAuth 2  
+Grant type: client credentials  
+Set Access Token URL, Client ID, Client Secret  
+Scope: openid  
+Add authorization data to: Request headers  
+Then send `get` request to `http://localhost:8083/mcs1/hello` and recieve response  

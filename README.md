@@ -47,4 +47,10 @@ Set Access Token URL, Client ID, Client Secret
 Scope: openid  
 Add authorization data to: Request headers  
 Then send `get` request to `http://localhost:8083/mcs1/hello` and recieve response  
-
+## Lesson 4
+Keyclock 12.0 + does not support Refresh Token for Client Credentials Grant  
+**Config the authorization tab in postman:**  
+Type: OAuth 2  
+Set Token Name  
+Add authorization data to: Request headers  
+Grant type: Authorization code  

@@ -1,7 +1,7 @@
 # Author
 ## DennisKingsman
-# KeyClock
-Command to run KeyClock on the custom port (8080 is default)  
+# KeyCloak
+Command to run KeyCloak on the custom port (8080 is default)  
 Enter to cmd in the bin dir  
 `sh ./standalone.sh -Djboss.http.port=8180`  
 ## Lesson 1
@@ -49,7 +49,7 @@ Add authorization data to: Request headers
 Then send `get` request to `http://localhost:8083/mcs1/hello` and recieve response  
 ## Lesson 4
 ### Refresh token
-Keyclock 12.0 + does not support Refresh Token for Client Credentials Grant  
+Keycloak 12.0 + does not support Refresh Token for Client Credentials Grant  
 **Try to get refresh token**  
 **Config the authorization tab in postman:**  
 Type: OAuth 2  
@@ -57,7 +57,7 @@ Set Token Name
 Add authorization data to: Request headers  
 Grant type: Authorization code  
 Callback URL: set the Valid Redirect URI from lesson one client  
-Set Auth URL and Access Token URL using relm settings and Client ID, Client Secret using keyclock client  
+Set Auth URL and Access Token URL using relm settings and Client ID, Client Secret using keycloak client  
 Scope: openid  
 Ckick on `get new access token` and enter keyclock user credentials  
 U will get Access Token, refresh_token and id_token  

@@ -1,0 +1,16 @@
+spring.security:
+    oauth2:
+        resourceserver.jwt:
+            jwk-set-uri: http://localhost:8180/auth/realms/oauth2-jwt-keyclock1/protocol/openid-connect/certs
+        client:
+            provider.oauth2-client-credentials:
+                issuer-uri: http://localhost:8180/auth/realms/oauth2-jwt-keyclock1
+            registration.oauth2-client-credentials:
+                client-id: oauth2-client-credentials
+                client-secret: d42d58cd-c9ab-4441-b075-e1d31e0e46c8
+                scope: openid, profile, roles
+                authorization-grant-type: client_credentials
+
+server:
+    port: 8083
+

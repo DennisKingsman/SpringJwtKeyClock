@@ -1,0 +1,6 @@
+spring.security:
+  oauth2:
+    resourceserver.jwt:
+      jwk-set-uri: http://localhost:8180/auth/realms/oauth2-jwt-keyclock1/protocol/openid-connect/certs
+server:
+  port: 8084
